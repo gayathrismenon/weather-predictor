@@ -7,4 +7,8 @@ url='http://openweathermap.org/data/2.5/weather?q={}&units=metric&appid={}'.form
 res = requests.get(url)
 data = res.json()
 temp = data['main']['temp']
-print('Temperature : {} {} C'.format(temp,degree_sign))
+print('City : {}'.format(city))
+print('Temperature')
+print('Temperature in Celcius: {} {} C'.format(temp,degree_sign))
+fahren=(temp*(9/5))+32
+print('Temperature in Fahrenheit: {} {} F'.format(fahren,degree_sign))
